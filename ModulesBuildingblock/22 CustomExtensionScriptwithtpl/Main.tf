@@ -22,7 +22,7 @@ resource "azurerm_virtual_machine_extension" "Terra-CustomScriptAgent" {
 
   settings = "${data.template_file.customscripttemplate.rendered}"
 
-    tags {
+    tags = {
     Environment         = "${var.EnvironmentTag}"
     Usage               = "${var.EnvironmentUsageTag}"
     Owner               = "${var.OwnerTag}"
