@@ -14,7 +14,7 @@ resource "azurerm_public_ip" "TerraPublicIP" {
   sku                          = "${var.PIPAddressSku}"
   domain_name_label            = "${lower(var.EnvironmentTag)}${lower(var.PublicIPName)}${count.index+1}"
 
-  tags {
+  tags = {
     Environment       = "${var.EnvironmentTag}"
     Usage             = "${var.EnvironmentUsageTag}"
     Owner             = "${var.OwnerTag}"
@@ -33,7 +33,7 @@ resource "azurerm_public_ip" "TerraPublicIPZoneRedundant" {
   domain_name_label            = "${lower(var.EnvironmentTag)}${lower(var.PublicIPName)}${count.index+1}"
 
 
-  tags {
+  tags = {
     Environment       = "${var.EnvironmentTag}"
     Usage             = "${var.EnvironmentUsageTag}"
     Owner             = "${var.OwnerTag}"
