@@ -23,7 +23,7 @@ resource "azurerm_virtual_machine_extension" "Terra-NetworkWatcherAgentWin" {
         }
 SETTINGS
 
-    tags {
+    tags = {
     Environment         = "${var.EnvironmentTag}"
     Usage               = "${var.EnvironmentUsageTag}"
     Owner               = "${var.OwnerTag}"
