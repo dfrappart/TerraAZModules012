@@ -26,7 +26,7 @@ resource "azurerm_virtual_network_gateway_connection" "TerraS2SConnect" {
     sa_lifetime      = "${var.S2Ssa_lifetime}"
   }
 
-  tags {
+  tags = {
     Environment       = "${var.EnvironmentTag}"
     Usage             = "${var.EnvironmentUsageTag}"
     Owner             = "${var.OwnerTag}"
