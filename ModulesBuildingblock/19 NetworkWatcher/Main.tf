@@ -12,7 +12,7 @@ resource "azurerm_network_watcher" "Terra_NW" {
     location                = "${var.NWLocation}"
     resource_group_name     = "${var.RGName}"
     
-    tags {
+    tags = {
         Environment         = "${var.EnvironmentTag}"
         Usage               = "${var.EnvironmentUsageTag}"
         Owner               = "${var.OwnerTag}"
