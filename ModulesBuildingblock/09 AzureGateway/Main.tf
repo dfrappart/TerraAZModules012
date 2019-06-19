@@ -26,7 +26,7 @@ resource "azurerm_virtual_network_gateway" "TerraVirtualNetworkGW" {
     public_ip_address_id = "${var.AGWPIPId}"
   }
 
-  tags {
+  tags = {
     Environment      = "${var.EnvironmentTag}"
     Usage            = "${var.EnvironmentUsageTag}"
     Owner            = "${var.OwnerTag}"
@@ -65,7 +65,7 @@ resource "azurerm_virtual_network_gateway" "TerraVirtualNetworkGWAA" {
     public_ip_address_id = "${var.AGWPIPId}"
   }
 
-  tags {
+  tags = {
     Environment      = "${var.EnvironmentTag}"
     Usage            = "${var.EnvironmentUsageTag}"
     Owner            = "${var.OwnerTag}"
