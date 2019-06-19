@@ -21,7 +21,7 @@ resource "azurerm_network_interface" "TerraNICnopipwithcountLoadBalanced" {
 
   }
 
-    tags {
+    tags = {
     Environment         = "${var.EnvironmentTag}"
     Usage               = "${var.EnvironmentUsageTag}"
     Owner               = "${var.OwnerTag}"
@@ -42,7 +42,7 @@ resource "azurerm_network_interface" "TerraNICnopipwithcountNotLoadBalanced" {
     application_security_group_ids = ["${var.ASGIds}"]
   }
 
-    tags {
+    tags = {
     Environment         = "${var.EnvironmentTag}"
     Usage               = "${var.EnvironmentUsageTag}"
     Owner               = "${var.OwnerTag}"
