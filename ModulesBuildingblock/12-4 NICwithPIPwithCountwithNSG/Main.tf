@@ -21,7 +21,7 @@ resource "azurerm_network_interface" "TerraNICwpip" {
     primary                       = "${var.Primary}"
   }
 
-    tags {
+    tags = {
     Environment         = "${var.EnvironmentTag}"
     Usage               = "${var.EnvironmentUsageTag}"
     Owner               = "${var.OwnerTag}"
