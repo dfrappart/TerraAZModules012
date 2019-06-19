@@ -10,7 +10,7 @@ resource "azurerm_application_security_group" "Terra-ASG" {
   location            = "${var.ASGLocation}"
   resource_group_name = "${var.RGName}"
 
-    tags {
+    tags = {
     Environment         = "${var.EnvironmentTag}"
     Usage               = "${var.EnvironmentUsageTag}"
     Owner               = "${var.OwnerTag}"
