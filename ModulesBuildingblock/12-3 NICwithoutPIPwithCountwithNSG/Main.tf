@@ -20,7 +20,7 @@ resource "azurerm_network_interface" "TerraNICnopipwithcountLoadBalanced" {
     load_balancer_backend_address_pools_ids = ["${element(var.LBBackEndPoolid,count.index)}"]
   }
 
-    tags {
+    tags = {
     Environment         = "${var.EnvironmentTag}"
     Usage               = "${var.EnvironmentUsageTag}"
     Owner               = "${var.OwnerTag}"
@@ -41,7 +41,7 @@ resource "azurerm_network_interface" "TerraNICnopipwithcountNotLoadBalanced" {
     private_ip_address_allocation = "dynamic"
   }
 
-    tags {
+    tags = {
     Environment         = "${var.EnvironmentTag}"
     Usage               = "${var.EnvironmentUsageTag}"
     Owner               = "${var.OwnerTag}"
