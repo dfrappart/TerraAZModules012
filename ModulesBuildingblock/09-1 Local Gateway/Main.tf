@@ -14,7 +14,7 @@ resource "azurerm_local_network_gateway" "TerraLocalGW" {
   gateway_address       = "${var.LGWAdress}"
   address_space         = "${var.LGWAddressspace}"
 
-    tags {
+    tags = {
     Environment       = "${var.EnvironmentTag}"
     Usage             = "${var.EnvironmentUsageTag}"
     Owner             = "${var.OwnerTag}"
