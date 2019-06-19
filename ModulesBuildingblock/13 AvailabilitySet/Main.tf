@@ -12,7 +12,7 @@ resource "azurerm_availability_set" "TerraAS" {
   resource_group_name         = "${var.RGName}"
   platform_fault_domain_count = "${var.FaultDomainCount}"
 
-    tags {
+    tags = {
     Environment         = "${var.EnvironmentTag}"
     Usage               = "${var.EnvironmentUsageTag}"
     Owner               = "${var.OwnerTag}"
