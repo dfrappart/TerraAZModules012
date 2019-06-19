@@ -13,13 +13,16 @@ It includes:
     - a log analytics workspace
     - a storage account for storing the logs
     - an azure firewall deployed in the firewall subnet
+    - a route table and the associated route for the Shared Services Subnet
     - NSGs for the Shared Services and Bastion Subnets
-    - a Keyvault
+    - a Keyvault and its access policies
 - A RG for the bastion VM(s)
     - Bastion VMs
     - Public IPs for the Bastion VMs
 
-It requires a terraformtgvars:
+For ease of reading, the traditional structure main.tf, variables.tf, outputs.tf is not followed, since there are quite a lot of resources to be created
+
+It requires a terraformtvars:
 
 
 RGHubName         = "RG_Hub"
@@ -33,14 +36,12 @@ VNetHubAddressSpace   = ["x.x.x.x/y"]
 
 SubnetInfraaddressprefix = [
     "x.x.x.x/y",
-    "x.x.x.x/y""
-
+    "x.x.x.x/y"
   ]
 
 SubnetHubaddressprefix = [
     "x.x.x.x/y",
-    "x.x.x.x/y""
-
+    "x.x.x.x/y"
   ]
 
 
@@ -114,5 +115,7 @@ module "HubSpoke" {
 
 }
 ```
+
+
 
 
