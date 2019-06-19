@@ -14,7 +14,7 @@ resource "azurerm_storage_account" "Terra-STOA" {
   account_replication_type = "${var.StorageReplicationType}"
   account_kind             = "StorageV2"
 
-  tags {
+  tags = {
     Environment            = "${var.EnvironmentTag}"
     Usage                  = "${var.EnvironmentUsageTag}"
     StorageReplicationType = "${var.StorageReplicationType}"
